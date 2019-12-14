@@ -1967,14 +1967,12 @@
             sticky(document.getElementById("navbar"))
         }
         function sticky(navbar) {
-
-            if (window.pageYOffset >= navbar.offsetTop) {
+            console.log("page: " ,pageXOffset);
+            console.log("nav: ",navbar.offsetTop);
+            if (window.pageYOffset > navbar.offsetTop) {
                 navbar.classList.add("sticky");
-                console.log("stcky")
             } else {
                 navbar.classList.remove("sticky");
-                console.log("yeild")
-
             }
         }
         function morePost(){

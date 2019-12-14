@@ -19,7 +19,7 @@ body {
 
 .sticky {
   position: fixed;
-  top: 0px;
+  top: -4px;
   width: 100%;
   z-index: 10000000000;
 }
@@ -176,10 +176,12 @@ body {
 }
 
 .icon-play {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
   display: block;
-  background-position: -15px -115px;
+  background-position: -8px -108px;
 }
 
 .icon-red {
@@ -230,11 +232,13 @@ header #search input {
   position: absolute;
   right: 30px;
   top: -13px;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+  z-index: -1000;
 }
 
 header #search input:focus {
+  z-index: 1000;
   width: 400px;
 }
 
@@ -302,11 +306,20 @@ header #search input:focus {
   margin-top: 4px;
 }
 
-.menu i {
+.menu ul {
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu ul i {
   display: block;
 }
 
-.menu a {
+.menu ul a {
   font: normal 12px/28px "Roboto-Bold";
   color: #000000;
   text-transform: uppercase;
@@ -381,11 +394,6 @@ header #search input:focus {
 
 .wrap-top-news {
   width: 545px;
-}
-
-.wrap-top-news img {
-  width: 100%;
-  height: 340px;
 }
 
 .wrap-top-news .wrap-content {
@@ -478,10 +486,6 @@ header #search input:focus {
   height: 139px;
 }
 
-.wrap-stream-post img {
-  height: 100%;
-}
-
 .wrap-stream-post .wrap-content {
   padding: 24px 19px;
 }
@@ -510,11 +514,6 @@ header #search input:focus {
 
 .wrap-cate-post-list {
   width: 3px;
-}
-
-.wrap-cate-post-list img {
-  width: 150px;
-  height: 94px;
 }
 
 .wrap-cate-post-list a {
@@ -1231,6 +1230,9 @@ input[type="text"]::placeholder {
 
 [class|=img] {
   display: block;
+}
+
+[class|=img]:empty {
   background: #EBEBEB;
 }
 
