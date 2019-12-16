@@ -173,7 +173,18 @@ $icon: "assets/image/icon.svg";
     background-position-y: -70px !important;
 }
 // END ICON
-
+// ========== SCREEN =============
+@media only screen and (max-width: 1160px){
+    .flex{
+        flex-wrap: wrap;
+    }
+    .nav{
+        
+    }
+    .wrap-stream-post{
+        flex-wrap: nowrap;
+    }
+}
 // =========== HEADER ============
 .logo{
     display: block;
@@ -181,6 +192,11 @@ $icon: "assets/image/icon.svg";
     height: 43px;
     background-image: url($icon);
     background-position-x: -15px;
+    
+    margin-bottom: 30px;
+}
+#logo{
+    margin-top: 20px;
     a{
         position: relative;
         span{
@@ -193,7 +209,6 @@ $icon: "assets/image/icon.svg";
     }
 }
 header{
-    padding: 20px 0px 32px 0px;
 
     // Search
     #search{
@@ -208,7 +223,7 @@ header{
         input{
             position: absolute;
             right: 30px;
-            top: -13px;
+            top: 17px;
             transition: width .5s;
             z-index: -1000;
             &:focus{
@@ -222,8 +237,14 @@ header{
 }
 // NAV
 .nav{
-    align-items: center;;
+    align-items: center;
+    // margin-top: 20px;
+    
    li{
+       margin-top: 20px;
+    &:not(:last-child) a{
+        border-right: 1px solid #CCCCCC;
+      }
       a{
           i{
               display: block;
@@ -232,7 +253,7 @@ header{
           font: normal 11px/normal "Arial Regular";
           color: #868686;
           text-transform: uppercase;
-          border-right: 1px solid #CCCCCC;
+          
           padding: 0px 15px;
           &:hover{
               color: red;
@@ -315,10 +336,9 @@ header{
     display: flex;
 }
 
-.row{
+.flex{
     @extend %flex;
     // flex-basis: 10px;
-    flex-wrap: wrap;
 }
 .col{
     @extend %flex;
@@ -450,6 +470,7 @@ header{
     .info{
         margin-top: 17px;
     }
+    margin-bottom: 30px;
 
 }
 
@@ -487,12 +508,25 @@ header{
     a:nth-child(2n + 1){
         margin-top: 0px;
     }
+    img{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 5px;
+            left: 0px;
+            background-color: #FFF0AC;
+        }
+    }
 }
 .wrap-video-highlight {
     .thumb{
         width: 264px;
         // height: 164px;
         position: relative;
+        
         .thumb-content{
             position: absolute;
             bottom: 0px;
@@ -514,6 +548,7 @@ header{
             }
         }
     }
+
 }
 .wrap-vistream-post{
     width: 264px;
@@ -652,21 +687,10 @@ input[type="text"]{
     font: 14px/21px "Roboto-Regular";
     color: #435C73;
     align-self: center;
-    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0px 2px 0px #D8DBE2;
 
 }
-.__ {
-    font-size: 14px;
-    font-family: "FontAwesome";
-    color: rgb(249, 249, 249);
-    line-height: 1.5;
-    text-align: center;
-    position: absolute;
-    left: 992.044px;
-    top: 8659px;
-    z-index: 1594;
-  }
-  
 // END BUTTON
 .wrap-graphic{
     width: 274px;
@@ -936,8 +960,12 @@ input[type="text"]{
         margin-right: 13px;
     }
 }
+.tray-top > div{
+    margin-bottom: 30px;
+}
 .tray-top5{
     padding: 27px 26px;
+    margin-bottom: 30px;
 }
 
 // TRAY MAIN
@@ -974,19 +1002,19 @@ input[type="text"]{
     }
     & > ul:last-child > li{
        &:nth-child(1){
-         margin-top: 30px;
+           margin-bottom: 25px;
        }
        &:nth-child(2){
-         margin-top: 25px;
+         margin-bottom: 22px;
        }
        &:nth-child(3){
-         margin-top: 22px;
+         margin-bottom: 28px;
        }
        &:nth-child(4){
-         margin-top: 28px;
+         margin-bottom: 28px;
        }
        &:nth-child(5){
-         margin-top: 28px;
+         margin-bottom: 30px;
        }
     }
 }
@@ -1002,6 +1030,7 @@ input[type="text"]{
     }   
 }
 .tray-category{
+
     padding: 18px 20px 18px 18px;
     h4{
         font: normal 18px/19px "Roboto-BoldCondensed";
@@ -1010,6 +1039,11 @@ input[type="text"]{
        i{
            margin-right: 10px;
        }
+    }
+    .tray-content{
+        &>div{
+            margin-bottom: 30px !important;
+        }
     }
     .tray-content .list-post{
         border-right: 1px solid #EBEBEB;
@@ -1168,7 +1202,8 @@ footer {
         padding: 36px 0px 20px 0px;
         flex-wrap: wrap;
         li{
-            width: 20%;
+            width: 232px;
+            margin-bottom: 25px;
            &:nth-child(n + 6){
                margin-top: 25px;
            }       
