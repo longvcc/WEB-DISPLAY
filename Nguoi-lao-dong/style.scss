@@ -274,9 +274,13 @@ header{
     overflow: hidden;
     margin-top: 4px;
     ul{
-        height: 40px;
+        // height: 40px;
+        min-height: 40px;
         align-items: center;
         flex-wrap: wrap;
+        li{
+            padding: 0px 10px;
+        }
         i{
             display: block;
         }
@@ -291,7 +295,7 @@ header{
 /* Layout */
 
 .container{
-    width: 1160px;
+    max-width: 1160px;
     margin: 0 auto;
 }
 .all{
@@ -313,6 +317,8 @@ header{
 
 .row{
     @extend %flex;
+    // flex-basis: 10px;
+    flex-wrap: wrap;
 }
 .col{
     @extend %flex;
@@ -401,6 +407,7 @@ header{
     width: 260px;
     position: relative;
     padding: 19px 18px;
+    min-height: 526px;
     ul{
         overflow-y: scroll;    
     }
