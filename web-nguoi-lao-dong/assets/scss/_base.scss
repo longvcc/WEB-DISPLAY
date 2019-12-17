@@ -1,0 +1,27 @@
+
+
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    // flex-wrap: wrap;
+}
+.flex-col{
+    @extend .flex;
+    flex-direction: column;
+}
+.between{
+    justify-content: space-between;
+}
+body{
+    background-color: #F2F3F4;
+}
+
+[class|="box"]{
+    background-color: white;
+}
+.wrap{
+    flex-wrap: wrap;
+}

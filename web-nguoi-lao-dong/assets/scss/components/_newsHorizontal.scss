@@ -1,0 +1,15 @@
+.box-news-horizontal{
+    padding: 33px 26px 22px 26px;
+    margin-bottom: 30px;
+    .item-news{
+        width: 202px;
+        &:not(:last-child){
+            margin-right: 25px;
+        }
+        a{
+            font: 16px/22px "Roboto-Medium";
+            color: #202020;
+            margin-top: 10px;
+        }
+    }
+}

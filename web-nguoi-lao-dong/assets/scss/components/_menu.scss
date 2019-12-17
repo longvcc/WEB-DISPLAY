@@ -1,0 +1,14 @@
+.menu-container{
+    background: white;
+    margin-bottom: 29px;
+    .menu-top{
+        li{
+            padding: 11px 0px;
+        }
+        a{
+            color: #000000;
+            font: 12px/28px "Roboto-Bold";
+            text-transform: uppercase;
+        }
+    }
+}
