@@ -25,3 +25,104 @@ body{
 .wrap{
     flex-wrap: wrap;
 }
+input[type="text"]{
+    margin-top: 19px;
+}
+input[type="submit"]{
+    color: #FFFFFF;
+    font: normal normal 14px/24px "Roboto";
+    background: #1778CF;
+    padding: 7px 0px ;
+    text-align: center;
+    width: 130px;
+    text-transform: uppercase;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: 28px;
+}
+input[type=radio] + label{
+    font: normal 13px/16px "Arial-Regular";
+    color: #8A9093;
+    margin-left: 35px;
+    position: relative;
+    cursor: pointer;
+
+    &::before{
+
+        content: "";
+        border: 1px solid #8B8B8B;
+        background: white;
+        border-radius: 100%;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        position: absolute;
+        left: -35px;
+        top: 0px;
+    }
+}
+input[type=radio]{
+    display: none;
+}
+input[type=radio]:checked + label{
+    &::after{
+        content: "";
+        border: none;
+        background: #00539D;
+        border-radius: 100%;
+        width: 4px;
+        height: 4px;
+        display: inline-block;
+        position: absolute;
+        left: -30px;
+        top: 5px;
+
+    }
+}
+input[type="text"]{
+    margin-top: 19px;
+    padding: 8px 20px;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+    width: 100%;
+    &::placeholder{
+        color: #8B9BA7;
+        font: 12px/24px "Arial-Regular";
+        opacity: .5;
+    }
+}
+[class|=btn]{
+    padding: 10px 25px;
+    border: none;
+    font:14px/21px "Roboto-Medium";
+    cursor: pointer;
+}
+.btn-primary{
+    background: #1A7DD5;
+    color: white;
+    border: 1px solid #DADBDE;
+    border-radius: 3px;
+}
+.btn-default{
+    background: none;
+}
+.btn-grey{
+    color: #F9F9F9;
+    background: #8B9BA7;
+    i{
+        font: 14px/21px "FontAwesome";
+        margin-right: 14px;
+    }
+}
+.btn-more{
+   width: 180px;
+   height: 40px;
+    background: white;
+    font: 14px/21px "Roboto-Regular";
+    color: #435C73;
+    align-self: center;
+    margin-bottom: 40px;
+    box-shadow: 0px 2px 0px #D8DBE2;
+
+}

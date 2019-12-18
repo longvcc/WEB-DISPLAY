@@ -43,6 +43,17 @@
     }
     .box-photo{
         margin-bottom: 22px;
+        img{
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 5px;
+                left: 0px;
+                background-color: #FFF0AC;
+            }
+        }
     }
     .box-enter{
         margin-bottom: 28px;
@@ -81,6 +92,71 @@
                 }
                 
            }
+        }
+    }
+    .news-row{
+        .box-news{
+            width: 190px;
+            margin-bottom: 26px;
+            .news-content{
+                padding: 17px 19px;
+                .post-title{
+                    font: normal 15px/21px "Roboto-Medium";
+                    color: #000;
+                    display: block;
+                }  
+                .post-cate ,small{
+                    margin-top: 17px;
+                    font: normal 10px "Arial-Regular";
+                    color: #838383;
+                }
+            } 
+        }
+    }
+}
+.box-banner-poll{
+    margin-bottom: 30px;
+    .banner{
+        width: 274px;
+        .banner-content{
+            background: white;
+            padding: 13px;
+            width: 254px;
+            margin: 0 auto;
+            transform: translateY(-20px);
+            small{
+                font: normal 10px "Roboto-Bold";
+                color: #E83333;
+            }
+            h3{
+                font: normal 19px/24px "Roboto-Medium";
+                color: #28333B;
+            }
+            
+        }
+    }
+    .poll{
+        width: 265px;
+        padding-right:22px;
+        border-right: 1px solid #F3F2F2;
+        h5{
+            font: normal 13px/18px "Arial-Regular";
+            color: #242B31;
+            opacity: 35%;
+        }
+        p{
+            font: normal 15px/20px "Roboto-Medium";
+            margin: 20px 0px 25px;
+        }
+        form{
+            .input-group{   
+                &:not(:first-child){
+                    margin-top: 20px;
+                }
+            } 
+            div:last-child{
+                margin-top: 25px;
+            }   
         }
     }
 }
